@@ -1,0 +1,46 @@
+@startuml
+left to right direction
+package UserAggregation {
+    object User {
+        ユーザーID
+        ユーザー名
+        年
+        性別
+        プレミアム会員
+        プロフィール画像
+        自己紹介
+        居住地
+        出身地
+        有効/無効
+    }
+}
+
+package LikeAggregation {
+    object Like {
+        いいねID
+        いいねしたユーザーID
+        いいねされたユーザーID
+        マッチング
+    }
+}
+
+package MessageAggregation {
+    object Message {
+        メッセージID
+        いいねしたユーザーID
+        いいねされたユーザーID
+        既読/未読
+    }
+}
+
+package BlockAggregation {
+    object Block{
+        ブロックID
+        ブロックしたユーザーID
+        ブロックされたユーザーID
+    }
+}
+User --> Like:Refer to ユーザーID
+User --> Message:Refer to ユーザーID
+User --> Block:Refer to ユーザーID
+@enduml

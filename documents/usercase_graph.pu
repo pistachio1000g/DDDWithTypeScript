@@ -1,0 +1,12 @@
+@startuml
+left to right direction
+actor "User" as User
+rectangle TargetUser{
+    usecase "Like" as Like
+    usecase "Send Message" as SendMessage
+    usecase "Block" as Block
+}
+User --> Like
+User --> SendMessage
+User --> Block
+@enduml
