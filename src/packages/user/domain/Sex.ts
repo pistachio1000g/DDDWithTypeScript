@@ -5,5 +5,5 @@ export const SexType = {
 export type SexType = typeof SexType[keyof typeof SexType]
 
 export class Sex {
-  constructor(readonly sexType: SexType) {}
+  constructor(readonly value: SexType) {}
 }
