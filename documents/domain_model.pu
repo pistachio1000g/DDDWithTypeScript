@@ -1,7 +1,0 @@
-@startuml
-package Restaurant {
-  object "User" as User
-  object "Like" as Like
-  object "Message" as Message
-}
-@enduml

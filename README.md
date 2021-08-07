@@ -1,3 +1,14 @@
+# DDD でマッチングアプリをモデリングしていく With TypeScript
+
+## モデリング
+
+### ユースケース図
+
+![ユースケース](out/documents/usercase_graph/usercase_graph.png)
+### ドメインモデル図
+
+![ユースケース](out/documents/aggregation/aggregation.png)
+
 # Vue 3 + Typescript + Vite
 
 This template should help get you started developing with Vue 3 and Typescript in Vite.

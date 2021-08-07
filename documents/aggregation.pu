@@ -20,7 +20,7 @@ package LikeAggregation {
         いいねID
         いいねしたユーザーID
         いいねされたユーザーID
-        マッチング
+        マッチング状態
     }
 }
 
@@ -40,7 +40,24 @@ package BlockAggregation {
         ブロックされたユーザーID
     }
 }
+
 User --> Like:Refer to ユーザーID
 User --> Message:Refer to ユーザーID
 User --> Block:Refer to ユーザーID
+
+note right of Like
+マッチング状態は最初はかならず非マッチング
+同じ相手には1回しかいいねはできない
+ブロックされている相手にはできない
+end note
+
+note right of Message
+マッチングした相手にしか送れない
+ブロックされている相手には送れない
+end note
+
+note right of Block
+ブロックは同じ相手には1回しかできない
+end note
+
 @enduml
