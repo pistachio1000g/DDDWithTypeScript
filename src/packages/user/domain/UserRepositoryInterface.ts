@@ -3,5 +3,5 @@ import { User } from './User'
 
 export interface UserRepositoryInterface {
   save(user: User): void
-  find(id: Id): User
+  find(id: Id): User | null
 }
