@@ -1,7 +1,11 @@
 import { UserFactoryInterface } from '../domain/UserFactory'
+import { UserRepositoryInterface } from '../domain/UserRepositoryInterface'
 
 export class CreateUserUseCase {
-  constructor(private readonly userFactory: UserFactoryInterface) {}
+  constructor(
+    private readonly userFactory: UserFactoryInterface,
+    private readonly userRepository: UserRepositoryInterface
+  ) {}
 
   handler(command: CreateUserCommand): CreateUserResult {
     const user = this.userFactory.create(
@@ -10,6 +14,8 @@ export class CreateUserUseCase {
       command.age,
       command.sex
     )
+
+    this.userRepository.save(user)
 
     return new CreateUserResult(
       user.id.value,
