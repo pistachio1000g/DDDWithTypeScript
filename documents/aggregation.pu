@@ -41,9 +41,9 @@ package BlockAggregation {
     }
 }
 
-User --> Like:Refer to ユーザーID
-User --> Message:Refer to ユーザーID
-User --> Block:Refer to ユーザーID
+User "1" *-- "n" Like:Refer to ユーザーID
+User "1" *-- "n" Message:Refer to ユーザーID
+User "1" *-- "n" Block:Refer to ユーザーID
 
 note right of Like
 マッチング状態は最初はかならず非マッチング

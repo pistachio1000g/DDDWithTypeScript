@@ -1,12 +1,21 @@
 @startuml
-left to right direction
 actor "User" as User
+left to right direction
 rectangle TargetUser{
     usecase "いいねする" as Like
     usecase "メッセージを送る" as SendMessage
     usecase "ブロックする" as Block
 }
+
+rectangle TargetLike{
+    usecase "いいねを返す" as Matching
+    usecase "いいねを却下する" as UnMatching
+}
 User --> Like
 User --> SendMessage
 User --> Block
+
+User --> Matching
+User --> UnMatching
+
 @enduml
