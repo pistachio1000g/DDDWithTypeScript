@@ -27,7 +27,7 @@ export class User {
     return this._sex
   }
 
-  changeUserName(userName: UserName) {
+  changeUserName(userName: UserName): void {
     this._userName = userName
   }
 }
