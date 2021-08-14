@@ -45,6 +45,12 @@ User "1" *-- "n" Like:Refer to ユーザーID
 User "1" *-- "n" Message:Refer to ユーザーID
 User "1" *-- "n" Block:Refer to ユーザーID
 
+note top of User
+プレミアム会員はいいねを無制限にできる
+有効状態で作成される
+無効になると全ての操作ができなくなる
+end note
+
 note right of Like
 マッチング状態は最初はかならず非マッチング
 同じ相手には1回しかいいねはできない

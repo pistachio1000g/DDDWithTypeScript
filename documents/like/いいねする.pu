@@ -1,0 +1,12 @@
+@startuml いいねする
+state choiceExistsId <<choice>>
+state choiceNotBlocked <<choice>>
+[*] --> choiceExistsId : 必須項目が入力されている
+choiceExistsId --> choiceNotBlocked : ブロックされていない
+choiceExistsId --> エラー : ブロックされている
+choiceNotBlocked --> いいねする : まだいいねしていない
+choiceNotBlocked --> エラー : すでにいいね済み
+いいねする --> [*] : いいね完了を画面に表示する
+[*] --> エラー : 必須項目が入力されていない
+エラー --> [*] : エラーを画面に表示する
+@enduml

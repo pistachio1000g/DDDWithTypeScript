@@ -5,6 +5,7 @@ rectangle TargetUser{
     usecase "いいねする" as Like
     usecase "メッセージを送る" as SendMessage
     usecase "ブロックする" as Block
+    usecase "ユーザーを検索する\n(Query)" as SearchUser
 }
 
 rectangle TargetLike{
@@ -14,6 +15,7 @@ rectangle TargetLike{
 User --> Like
 User --> SendMessage
 User --> Block
+User --> SearchUser
 
 User --> Matching
 User --> UnMatching
