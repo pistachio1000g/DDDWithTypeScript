@@ -5,6 +5,8 @@ import {
   CreateUserUseCase,
 } from '../../../packages/user/use_cases/CreateUserUseCase'
 
+import 'jest-localstorage-mock'
+
 describe('CreateUserUseCaseTest', (): void => {
   test('ユーザーが正しく作られるか.', (): void => {
     const useCase = new CreateUserUseCase(
